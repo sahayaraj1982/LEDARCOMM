@@ -219,7 +219,7 @@ input[type=date],input[type=text],input[type=number],select{width:100%;margin:8p
 <div id="actionPopup" class="popup-overlay" onclick="closeActionPopup()"><div class="popup-content" onclick="event.stopPropagation()"><h3 id="popupTitle" style="color:var(--theme-color)">Manage User</h3><button class="gold" id="editBtn" style="width:100%;padding:12px">✏️ Edit User</button><button style="background:#e53935;color:#fff;width:100%;margin-top:10px;padding:12px" id="deleteBtn">🗑️ Delete User</button><button style="background:#555;color:#fff;width:100%;margin-top:10px;padding:12px" onclick="closeActionPopup()">Cancel</button></div></div>  
 <div id="txActionPopup" class="popup-overlay" onclick="closeTxActionPopup()"><div class="popup-content" onclick="event.stopPropagation()"><h3 style="color:var(--theme-color)">Transaction Management</h3><button class="gold" id="txEditBtn" style="width:100%">✏️ Edit Entry</button><button style="background:#e53935;color:#fff;width:100%;margin-top:10px" id="txDeleteBtn">🗑️ Delete Entry</button><button style="background:#555;color:#fff;width:100%;margin-top:10px" onclick="closeTxActionPopup()">Cancel</button></div></div>  
 </div>  <script>  
-const CLOUD_URL="https://script.google.com/macros/s/AKfycbywWPv-adxCtyziNml7xDboP9fHi5KZfxT8WBx8W8rC9jXN0pTnNFNlrHSMeDXVQ0dV/exec";  
+const CLOUD_URL="https://script.google.com/macros/s/AKfycbyCqdATmUJje6MJV5GmHnvi-m547yYWCCBVJEgg9gF9-SsR65riNYuUEJYSIAEtU9ZCvg/exec";  
 function safeJSON(key,fallback){try{const raw=localStorage.getItem(key);if(!raw)return fallback;const v=JSON.parse(raw);return v??fallback}catch(e){console.warn("Invalid local data:",key,e);return fallback}}
 let users=safeJSON("financeUsersData",[]);
 if(!Array.isArray(users))users=[];
